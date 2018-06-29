@@ -2,9 +2,13 @@
 
 <html lang="en">
   <head>
-    <title>Sean May: Coder, </title>
   </head>
   <body>
-
+    <script>
+      fetch("/404.html")
+        .then(res => res.text())
+        .then(console.log)
+        .catch(console.log);
+    </script>
   </body>
 </html>
