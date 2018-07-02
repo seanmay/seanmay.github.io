@@ -1,0 +1,205 @@
+:root {
+  --heading-color: var(--hue-4);
+  --heading-font: "Fira Sans", sans-serif;
+
+  --body-color: var(--mono-1);
+  --body-font: "Fira Sans";
+
+  --emphasis-color: var(--hue-6-1);
+  --emphasis-font: "Fira Mono";
+
+  --link-color-unvisited: var(--hue-2);
+  --link-color-active: var(--hue-1);
+  --link-color-visited: var(--hue-3);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+
+  html {
+    font-size: 2.5rem;
+  }
+
+
+body {
+  background-color: var(--background);
+  font-family: var(--body-font);
+  color: var(--body-color);
+  line-height: calc(var(--baseline) * 1rem);
+  font-size: calc(var(--size-m) * 1rem);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+  font-stretch: extra-condensed;
+}
+
+em,
+strong {
+  font-family: var(--emphasis-font);
+  color: var(--emphasis-color);
+}
+
+a {
+  line-height: 1.4;
+  color: var(--link-color-unvisited);
+}
+a:visited {
+  color: var(--link-color-visited);
+}
+a:active {
+  color: var(--link-color-active);
+}
+
+.size-xl {
+  font-size: calc(var(--size-xl) * 1rem);
+  line-height: var(--baseline);
+  margin: calc(var(--size-xl) / var(--size-xl) * 2 * var(--baseline) * 1rem) 0;
+}
+
+.size-s {
+  font-size: calc(var(--size-s) * 1rem);
+  line-height: var(--baseline);
+}
+
+.tagline {
+  color: var(--foreground);
+  margin-top: -2em;
+  font-family: "Fira Mono"
+}
+
+.tagline span {
+  padding: 0 0.75em;
+}
+.tagline span:first-child {
+  padding-left: 0;
+}
+.tagline span:last-child {
+  padding-right: 0;
+}
+
+
+
+.advertize {
+  font-size: calc(1rem * 0.66);
+  justify-self: end;
+}
+
+.social-links {
+  display: inline-block;
+}
+.social {
+  display: inline-block;
+  padding: 0 0.5em;
+}
+.social:first-child {
+  padding-left: 1em;
+}
+.flex-container {
+  display: flex;
+}
+
+.flex-vertical {
+  flex-direction: column;
+}
+
+.flex-center {
+  justify-content: center;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-end {
+  justify-self: end;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+main:before {
+  position: absolute;
+  left: 0.75rem;
+  width: 20px;
+  height: calc(100% + 0.35rem);
+  /* height: 100%; */
+  border-left: 1px solid var(--mono-2);
+  content: "";
+}
+
+main {
+  position: relative;
+  flex: 1;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 0.35rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 80ch;
+  border-right: 1px solid var(--mono-2);
+  /* overflow: hidden; */
+}
+
+main:after {
+  content: "tip: you have too much monitor space";
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  /* border: 1px solid var(--mono-2); */
+  color: var(--mono-2);
+  position: absolute;
+  /* right: calc(-11ch - (100vw - 100%)/2); */
+
+  left: calc(100% + (100vw - 100%)/2 - 10ch - 0.5rem);
+
+  width: 20ch;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+footer {
+  justify-self: end;
+  color: var(--mono-2);
+  border-top: 1px solid var(--mono-2);
+  padding-left: 2rem;
+}
+
+
+.terminal {
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+  background-color: black;
+  color: greenyellow;
+}
+
+.animated-cursor {
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: inherit;
+  }
+}

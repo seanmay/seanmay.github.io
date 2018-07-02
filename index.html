@@ -2,13 +2,49 @@
 
 <html lang="en">
   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./site/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans|Fira+Sans+Extra+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
   </head>
-  <body>
-    <script>
-      fetch("/404.html")
-        .then(res => res.text())
-        .then(console.log)
-        .catch(console.log);
-    </script>
+  <body class="editor-shell flex-container flex-column">
+    <main class="editor-well flex-container flex-column flex-1">
+      <section class="editor-buffer flex-container flex-column flex-1">
+        <h1 class="header justify-end">
+          Sean May
+          <div class="subheader">
+            <span>:</span>
+            <span>architect</span>
+            <span>&middot;</span>
+            <span>problem-solver</span>
+            <span>&middot;</span>
+            <span><em class="emphasis">nerd</em></span>
+          </div>
+        </h1>
+      </section>
+      <section class="toaster">
+        <div class="toasts">
+          <article class="toast">
+            While you&rsquo;re here, you should check out the <a href="./blog/index.html">meta-blog</a>.
+            Once it&rsquo;s done, it will just be a blog.
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="editor-footer">
+      <span>site<span aria-hidden>:/</span>links<span aria-hidden>$</span></span>
+      <span class="social-links">
+        <a class="social"
+           href="https://twitter.com/seanjmay"
+           aria-label="my Twitter profile"
+          ><i aria-hidden class="fab icon fa-twitter"></i></a>
+        <a class="social"
+           href="https://github.com/seanmay"
+           aria-label="my Git Hub profile"
+          ><i aria-hidden class="fab icon fa-github"></i></a>
+      </span>
+    </footer>
   </body>
 </html>
