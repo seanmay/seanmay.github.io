@@ -1,0 +1,170 @@
+:root {
+  --editor-hue: 220;
+  --editor-saturation: 13%;
+  --editor-brightness: 18%;
+  --well-brightness: 13%;
+
+  --shell-bg: hsl(
+    var(--editor-hue),
+    var(--editor-saturation),
+    var(--editor-brightness)
+  );
+  --well-bg: hsl(
+    var(--editor-hue),
+    var(--editor-saturation),
+    var(--well-brightness)
+  );
+
+  --mono-1: hsl(var(--editor-hue), 14%, 71%);
+  --mono-2: hsl(var(--editor-hue), 9%, 55%);
+  --mono-3: hsl(var(--editor-hue), 10%, 40%);
+
+  --hue-1: hsl(187, 47%, 55%);
+  --hue-2: hsl(207, 82%, 66%);
+  --hue-3: hsl(286, 60%, 67%);
+  --hue-4: hsl(95, 38%, 62%);
+
+  --hue-5-1: hsl(355, 65%, 65%);
+  --hue-5-2: hsl(5, 48%, 51%);
+
+  --hue-6-1: hsl(29, 54%, 61%);
+  --hue-6-2: hsl(39, 67%, 69%);
+
+  --foreground: var(--mono-1);
+  --background: hsl(
+    var(--editor-hue),
+    var(--editor-saturation),
+    var(--editor-brightness)
+  );
+
+  --text-xl: 4.5rem;
+  --text-l: 2.5rem;
+  --text-m: 1rem;
+  --text-s: 0.75rem;
+  --text-xs: 0.5rem;
+
+  --font-sans: "Fira Sans", sans-serif;
+  --font-mono: "Fira Mono";
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 2.5rem;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.justify-end {
+  justify-self: end;
+}
+
+.editor-shell {
+  height: 100vh;
+  background-color: var(--shell-bg);
+  font-family: var(--font-sans);
+}
+
+.editor-well {
+  flex: 1;
+  background-color: var(--well-bg);
+}
+
+.editor-buffer {
+  justify-content: center;
+  background-color: var(--shell-bg);
+  max-width: 1920px;
+  height: 100%;
+  padding-left: 2rem;
+}
+
+.editor-nav {
+  background-color: var(--well-bg);
+  width: 100%;
+}
+
+.editor-footer {
+  justify-self: end;
+  border-top: 1px solid var(--mono-3);
+  line-height: 1.6;
+  background-color: var(--well-bg);
+  color: var(--mono-2);
+  padding-left: 2rem;
+}
+
+.header {
+  justify-self: center;
+  color: var(--hue-4);
+  font-size: var(--text-xl);
+}
+
+.header .subheader {
+  color: var(--mono-1);
+  font-size: var(--text-xs);
+  font-family: var(--font-mono);
+  margin-top: -1.2em;
+}
+
+.subheader span {
+  padding: 0 1em;
+}
+.subheader span:first-child {
+  padding-left: 0;
+}
+.subheader span:last-child {
+  padding-right: 0;
+}
+
+.emphasis {
+  color: var(--hue-6-1);
+}
+
+.toaster {
+  position: relative;
+  margin-left: 2rem;
+}
+
+.toasts {
+  position: absolute;
+  bottom: 0.25rem;
+  width: 42ch;
+}
+
+.toast {
+  border-radius: 0.25rem;
+  font-size: var(--text-xs);
+  padding: 0.5rem 1rem;
+  background-color: var(--well-bg);
+  color: var(--mono-2);
+}
+
+a {
+  color: var(--hue-2);
+}
+a:visited {
+  color: var(--hue-3);
+}
+a:active {
+  color: var(--hue-1);
+}
+
+.social {
+  padding: 0 0.5rem;
+}
+.social:first-child {
+  padding-left: 1rem;
+}
